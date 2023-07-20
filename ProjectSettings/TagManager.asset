@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Particle
+  - Ship
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - HUD
+  - Water
+  - UI
+  - Player
+  - 2D Lights and Shadows
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2639636163
+    locked: 0
+  - name: Help_Objects
+    uniqueID: 1183302313
+    locked: 0
+  - name: Enemies
+    uniqueID: 4100134409
+    locked: 0
+  - name: Projectils
+    uniqueID: 1260618009
+    locked: 0
+  - name: Deco_Objects
+    uniqueID: 942848011
+    locked: 0
+  - name: HUD
+    uniqueID: 1082474337
+    locked: 0

@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19cefa3bf552f94390d1c272b19ea6e, type: 3}
+  m_Name: All In One
+  m_EditorClassIdentifier: 
+  lightmapPresets:
+    list:
+    - name: Day Lighting
+      type: 3
+      hdr: 0
+      darknessColor: {r: 0, g: 0, b: 0, a: 1}
+      depth: -100
+      resolution: 1
+      dayLayers:
+        list:
+        - id: 0
+          type: 0
+          sorting: 0
+      lightLayers:
+        list:
+        - id: 0
+          type: 0
+          sorting: 0
+    - name: Lights
+      type: 0
+      hdr: 0
+      darknessColor: {r: 0, g: 0, b: 0, a: 1}
+      depth: -100
+      resolution: 1
+      dayLayers:
+        list: []
+      lightLayers:
+        list:
+        - id: 0
+          type: 0
+          sorting: 0
+    - name: Occlusion
+      type: 0
+      hdr: 0
+      darknessColor: {r: 0, g: 0, b: 0, a: 1}
+      depth: -100
+      resolution: 1
+      dayLayers:
+        list: []
+      lightLayers:
+        list:
+        - id: 1
+          type: 0
+          sorting: 0
+  lightPresets:
+    list:
+    - name: Optimised
+      layerSetting:
+        list:
+        - layerID: 0
+          type: 0
+          sorting: 0
+          sortingIgnore: 0
+          shadowEffect: 2
+          shadowEffectLayer: 0
+          maskLit: 0
+          maskLitDistance: 1
+  eventPresets:
+    list:
+    - name: Disabled
+      layerSetting:
+        list:
+        - layerID: 0
+    - name: Shadow Layer 1
+      layerSetting:
+        list:
+        - layerID: 0
+    - name: Shadow Layer 2
+      layerSetting:
+        list:
+        - layerID: 1
+    - name: Shadow Layer 3
+      layerSetting:
+        list:
+        - layerID: 2
+  qualitySettings:
+    lightTextureSize: 3
+    lightEffectTextureSize: 3
+    lightFilterMode: 2
+    lightmapFilterMode: 2
+    updateMethod: 0
+    coreAxis: 0
+    projection: 0
+  dayLightingSettings:
+    direction: 147
+    ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    height: 1.96
+    bumpMap:
+      height: 1.89
+      strength: 0.67
+  layers:
+    colliderLayers:
+      names:
+      - Collider Layer 1
+      - Collider Layer 2
+      - Collider Layer 3
+    lightLayers:
+      names:
+      - Lights
+      - Occlusion
+    dayLayers:
+      names:
+      - Default
