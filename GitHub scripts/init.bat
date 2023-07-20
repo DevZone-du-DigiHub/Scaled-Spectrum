@@ -2,11 +2,26 @@
 REM
 
 cd ..
-git init
-git remote add origin https://github.com/NoxGamingQC/Scaled-Spectrum.git
 
+echo Initilizing folder.
+git init
+
+cls
+
+echo Adding project path.
+git remote add origin git@github.com:DevZone-du-DigiHub/Scaled-Spectrum.git
+
+cls
+
+echo Importing project.
 git pull origin master
 
+cls
+
+echo Importing branch name.
 git fetch --all
 
+cls
+
+echo Initilization completed.
 PAUSE
