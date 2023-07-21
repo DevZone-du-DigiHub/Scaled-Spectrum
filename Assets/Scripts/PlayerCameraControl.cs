@@ -36,7 +36,9 @@ public class PlayerCameraControl : MonoBehaviour
     private void Start()
     {
         centerPosition = aimSightTransform.localPosition;
-        spriteRenderer = spriteRendererObject.GetComponent<SpriteRenderer>();
+        if(spriteRendererObject) {
+            spriteRenderer = spriteRendererObject.GetComponent<SpriteRenderer>();
+        }
     }
 
     private void LateUpdate()
