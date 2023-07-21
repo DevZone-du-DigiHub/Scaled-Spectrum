@@ -57,8 +57,9 @@ public class PlayerCameraControl : MonoBehaviour
         {
             transform.position = playerObject.transform.position;
         }
-
-        spriteRenderer.enabled = lookInput != Vector2.zero;
+        if(spriteRenderer) {
+            spriteRenderer.enabled = lookInput != Vector2.zero;
+        }
     }
 
     private void OnDisable()
