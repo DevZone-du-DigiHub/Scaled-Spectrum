@@ -6,5 +6,5 @@
 
 ## Auteurs et collaborateurs
 
-- [S3TMOTH](https://github.com/S3TM0TH)
+- [S3TM0TH](https://github.com/S3TM0TH)
 - [NoxGamingQC](https://github.com/NoxGamingQC)
