@@ -42,69 +42,14 @@ public class Blob_moves : MonoBehaviour
         }
     }
 
-    private void StartButton()
-    {
-        // Code for interacting
-        Debug.Log("[Start] Pause Button");
-    }
-
-    private void SelectButton()
-    {
-        // Code for interacting
-        Debug.Log("[Select] Select Button");
-    }
-
-    private void Shoot()
-    {
-        // Code for interacting
-        Debug.Log("[RT] Shoot Button");
-    }
-
-    private void Contract()
-    {
-        // Code for interacting
-        Debug.Log("[LT] Contract Button");
-    }
-
-    private void Absorb()
-    {
-        // Code for interacting
-        Debug.Log("[RB] Absorb Button");
-    }
-
-    private void ColourSelect()
-    {
-        // Code for interacting
-        Debug.Log("[LB] Colour Select Button");
-    }
-
-    private void Extract()
-    {
-        // Code for interacting
-        Debug.Log("[Y] Extract Button");
-    }
-
-    private void Sprint()
-    {
-        // Code for interacting
-        Debug.Log("[X] Sprint Button");
-    }
-
     private void Interact()
     {
         // Code for interacting
-        Debug.Log("[A] Interact Button");
 
         if (!isInsideShip)
         {
             // Teleport the player to the ship's position
             transform.position = shipObject.transform.position;
         }
-    }
-
-    private void Back()
-    {
-        // Code for interacting
-        Debug.Log("[B] Back Button");
     }
 }

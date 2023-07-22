@@ -78,10 +78,11 @@ namespace ERP
         {
             set
             {
-                if (value == _debugMode)
+                /*if (value == _debugMode)
                     return;
                 
-                _debugMode = value;
+                _debugMode = value;*/
+                _debugMode = false;
                 ERPSettings.SaveSettings();
             }
             get
