@@ -16,7 +16,7 @@ namespace ERP
         public bool showSceneName;
         public bool showProjectName;
         public bool resetOnSceneChange;
-        public bool debugMode;
+        public bool debugMode = false;
         public bool EditorClosed;
         public long LastTimestamp;
         public long LastSessionID;
