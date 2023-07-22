@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 2545395322564351190}
   - component: {fileID: 2000705486}
   - component: {fileID: 2000705487}
+  - component: {fileID: 2000705499}
   m_Layer: 6
   m_Name: Blob_Player
   m_TagString: Player
@@ -528,6 +529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleCollider: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  snapDistance: 1.7
+  snapIndicator: {fileID: 0}
+  imageToActivate: {fileID: 0}
   highlightedAction: 
 --- !u!114 &2545395322564351191
 MonoBehaviour:
@@ -578,7 +582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6682052359128016705}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
@@ -1566,3 +1570,15 @@ MonoBehaviour:
     - {x: -0.4999999, y: -0.86602545}
   drawingEnabled: 1
   drawingTranslucencyEnabled: 1
+--- !u!114 &2000705499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6682052359128016705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ba228d2118d2f4ab9daaa70c8ee92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
