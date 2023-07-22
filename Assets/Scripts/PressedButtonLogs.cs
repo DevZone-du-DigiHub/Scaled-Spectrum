@@ -7,10 +7,13 @@ using UnityEngine;
 public class PressedButtonLogs : MonoBehaviour
 {
     
-    public bool debug = true;
-    public bool controllerDebug = true;
-
+    public bool debug;
+    public bool controllerDebug;
+    private int _currentGamepadID = -1;
+    private string _currentGamepadName;
+    
     [Header("Controller inputs")]
+
     public bool AButton;
     public bool BButton;
     public bool XButton;
@@ -35,40 +38,44 @@ public class PressedButtonLogs : MonoBehaviour
     public bool RSDown;
     public bool RSLeft;
     public bool RSRight;
-
-
-    private int _currentGamepadID = -1;
-    private string _currentGamepadName;
-        
+            
     void Start()
     {
-        if(Gamepad.current != null) {
-            _currentGamepadID = Gamepad.current.deviceId;
-            _currentGamepadName = Gamepad.current.displayName;
-            Debug.Log(Gamepad.current.displayName + " is now connected.");
+        if(debug) {
+            if(controllerDebug) {
+                if(Gamepad.current != null) {
+                    _currentGamepadID = Gamepad.current.deviceId;
+                    _currentGamepadName = Gamepad.current.displayName;
+                    Debug.Log(Gamepad.current.displayName + " is now connected.");
+                }
+            }
         }
     }
 
     void Update()
     {
-        if(Gamepad.current != null) {
-            if(_currentGamepadID != Gamepad.current.deviceId && _currentGamepadID != -1) {
-                Debug.Log(_currentGamepadName + " disconnected.");
-                Debug.Log(Gamepad.current.displayName + " is now connected.");
-                _currentGamepadID = Gamepad.current.deviceId;
-                _currentGamepadName = Gamepad.current.displayName;
-            }
-            if(_currentGamepadID == -1) {
-                Debug.Log(Gamepad.current.displayName + " is now connected.");
-                _currentGamepadID = Gamepad.current.deviceId;
-                _currentGamepadName = Gamepad.current.displayName;
-            }
-                ControllerLog();
-        } else {
-            if(_currentGamepadID != -1) {
-                Debug.Log(_currentGamepadName + " disconnected.");
-                _currentGamepadID = -1;
-                _currentGamepadName = null;
+        if(debug) {
+            if(controllerDebug) {
+                if(Gamepad.current != null) {
+                    if(_currentGamepadID != Gamepad.current.deviceId && _currentGamepadID != -1) {
+                        Debug.Log(_currentGamepadName + " disconnected.");
+                        Debug.Log(Gamepad.current.displayName + " is now connected.");
+                        _currentGamepadID = Gamepad.current.deviceId;
+                        _currentGamepadName = Gamepad.current.displayName;
+                    }
+                    if(_currentGamepadID == -1) {
+                        Debug.Log(Gamepad.current.displayName + " is now connected.");
+                        _currentGamepadID = Gamepad.current.deviceId;
+                        _currentGamepadName = Gamepad.current.displayName;
+                    }
+                        ControllerLog();
+                } else {
+                    if(_currentGamepadID != -1) {
+                        Debug.Log(_currentGamepadName + " disconnected.");
+                        _currentGamepadID = -1;
+                        _currentGamepadName = null;
+                    }
+                }
             }
         }
     }
