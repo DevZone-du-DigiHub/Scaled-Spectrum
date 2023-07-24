@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 2000705487}
   - component: {fileID: 2000705499}
   m_Layer: 3
-  m_Name: Blob_Player
+  m_Name: Old_Blob_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
