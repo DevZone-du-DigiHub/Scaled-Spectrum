@@ -1,15 +1,13 @@
 # Scaled Spectrum
 
-<p align="left">
-  <img alt="License" src="https://img.shields.io/github/license/DevZone-du-DigiHub/Scaled-Spectrum?style=for-the-badge&branch=master" />
-  <img alt="Unity" src="https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=for-the-badge&logo=unity" />
-  <img alt="Unity version" src="https://img.shields.io/badge/Unity-2021.3.23f1-57b9d3.svg?style=for-the-badge&logo=unity" />
-  <img alt="State" src="https://img.shields.io/badge/State-In%20development-red.svg?style=for-the-badge" />
-</p>
+[![Type](https://img.shields.io/badge/project%20type-game-blue?style=for-the-badge&labelColor=333333)](#)
+[![State](https://img.shields.io/badge/state-in%20development-228C22?style=for-the-badge&labelColor=333333)](#)
+[![Repo size](https://img.shields.io/github/repo-size/DevZone-du-DigiHub/Scaled-Spectrum?style=for-the-badge&logo=github&logoColor=%23ffffff&labelColor=333333)](#)
+[![License](https://img.shields.io/github/license/DevZone-du-DigiHub/Scaled-Spectrum?style=for-the-badge&labelColor=333333)](#)
 
-## Exigences
+## Technologie utilisée
 
-- Unity Editor 2021.3.23f1
+![Unity](https://img.shields.io/badge/unity-2021.3.23f1-%23000000.svg?style=for-the-badge&labelColor=333333&logo=unity&logoColor=white)
 
 ## Auteurs et collaborateurs
 
