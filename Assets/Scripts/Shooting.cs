@@ -3,8 +3,13 @@ using UnityEngine.InputSystem;
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] private GameObject[] projectilePrefabs;
-    [SerializeField] private int selectedProjectileIndex = 0;
+    [SerializeField] private GameObject whiteProjectile;
+    [SerializeField] private GameObject cyanProjectile;
+    [SerializeField] private GameObject magentaProjectile;
+    [SerializeField] private GameObject yellowProjectile;
+
+    private GameObject currentProjectile;
+
     [SerializeField] private float projectileSpeed = 10f;
     [SerializeField] private InputAction shootAction;
     [SerializeField] private Vector2 projectileDirection = Vector2.up;
@@ -12,6 +17,11 @@ public class Shooting : MonoBehaviour
     [SerializeField] private AudioSource shootingAudioSource;
 
     [SerializeField] private Transform spawnPoint; // Transform representing the spawn point
+
+    private void Start()
+    {
+        SetWhiteProjectile(); // Default projectile
+    }
 
     private void OnEnable()
     {
@@ -27,19 +37,41 @@ public class Shooting : MonoBehaviour
 
     private void OnShootStarted(InputAction.CallbackContext context)
     {
-        if (selectedProjectileIndex >= 0 && selectedProjectileIndex < projectilePrefabs.Length)
+        ShootProjectile();
+    }
+
+    public void SetWhiteProjectile()
+    {
+        currentProjectile = whiteProjectile;
+    }
+
+    public void SetCyanProjectile()
+    {
+        currentProjectile = cyanProjectile;
+    }
+
+    public void SetMagentaProjectile()
+    {
+        currentProjectile = magentaProjectile;
+    }
+
+    public void SetYellowProjectile()
+    {
+        currentProjectile = yellowProjectile;
+    }
+
+    private void ShootProjectile()
+    {
+        if (currentProjectile != null)
         {
-            GameObject projectile = Instantiate(projectilePrefabs[selectedProjectileIndex], spawnPoint.position, Quaternion.identity);
+            GameObject projectile = Instantiate(currentProjectile, spawnPoint.position, Quaternion.identity);
 
-            if (projectile != null)
-            {
-                Vector3 localProjectileDirection = transform.TransformDirection(projectileDirection.normalized);
-                projectile.transform.up = localProjectileDirection;
-                projectile.GetComponent<Rigidbody2D>().velocity = localProjectileDirection * projectileSpeed;
+            Vector3 localProjectileDirection = transform.TransformDirection(projectileDirection.normalized);
+            projectile.transform.up = localProjectileDirection;
+            projectile.GetComponent<Rigidbody2D>().velocity = localProjectileDirection * projectileSpeed;
 
-                PlayVisualFeedback();
-                PlayAudioFeedback();
-            }
+            PlayVisualFeedback();
+            PlayAudioFeedback();
         }
     }
 
@@ -57,16 +89,5 @@ public class Shooting : MonoBehaviour
         {
             shootingAudioSource.Play();
         }
-    }
-
-    // Methods for projectile selection
-    public void SelectNextProjectile()
-    {
-        selectedProjectileIndex = (selectedProjectileIndex + 1) % projectilePrefabs.Length;
-    }
-
-    public void SelectPreviousProjectile()
-    {
-        selectedProjectileIndex = (selectedProjectileIndex - 1 + projectilePrefabs.Length) % projectilePrefabs.Length;
     }
 }

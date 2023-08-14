@@ -8,6 +8,21 @@ TagManager:
   - Ship
   - Projectile
   - Enemy
+  - Obstacle
+  - Red
+  - Green
+  - Blue
+  - Cyan
+  - Magenta
+  - Yellow
+  - White
+  - cyanUnlocker
+  - magentaUnlocker
+  - yellowUnlocker
+  - whiteUnlock
+  - hazard
+  - enemy
+  - life
   layers:
   - Default
   - TransparentFX
@@ -17,9 +32,9 @@ TagManager:
   - UI
   - Particles
   - Obstacle
-  - 
-  - 
-  - 
+  - 2D Lights
+  - 3D Lights
+  - Projectils
   - 
   - 
   - 

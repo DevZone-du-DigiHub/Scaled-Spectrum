@@ -69,7 +69,7 @@ MonoBehaviour:
         - layerID: 1
         - layerID: 2
   qualitySettings:
-    lightTextureSize: 3
+    lightTextureSize: 2
     lightEffectTextureSize: 2
     lightFilterMode: 2
     lightmapFilterMode: 2
