@@ -8,9 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaterWaves2DLit
-  m_Shader: {fileID: 4800000, guid: cb5ad8be1566c5e48b08a67f3714dbcc, type: 3}
-  m_ValidKeywords:
-  - PIXELSNAP_ON
+  m_Shader: {fileID: 4800000, guid: 78e6d116e066d7245a79d1732d9bfe5d, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - SL2D_PASS_1
   - _ALPHAPREMULTIPLY_ON
@@ -49,8 +48,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _HeightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -67,7 +74,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - PixelSnap: 1
+    - PixelSnap: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -75,11 +82,21 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LightIntensity: 0
+    - _LightMapLit: 0
     - _Lit: 0
     - _Mode: 3
+    - _OcclusionDepth: 1
+    - _OcclusionLit: 0
+    - _OcclusionOffset: 0.05
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ReceiveDepth: -100
+    - _ReceiveHeightMap: 0
+    - _ReceiveStrength: 0
+    - _ShadowsOffset: -1
     - _SmoothnessTextureChannel: 0
+    - _Specular: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0

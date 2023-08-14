@@ -8,11 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Player_Sprite
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: cb5ad8be1566c5e48b08a67f3714dbcc, type: 3}
   m_ValidKeywords:
   - PIXELSNAP_ON
   m_InvalidKeywords:
-  - SL2D_PASS_3
+  - SL2D_PASS_8
   - _ALPHAPREMULTIPLY_ON
   - _STRAIGHT_ALPHA_INPUT
   - _USE8NEIGHBOURHOOD_ON
@@ -125,14 +125,14 @@ Material:
     - _OutlineSmoothness: 1
     - _OutlineWidth: 3
     - _Parallax: 0.047
-    - _PassId: 3
+    - _PassId: 8
     - _ReceiveDepth: 100
     - _ReceiveHeightMap: 0.93
     - _ReceiveStrength: 0.5
     - _ShadowsOffset: 0
     - _Shininess: 0.434
     - _SmoothnessTextureChannel: 0
-    - _Specular: 0.55
+    - _Specular: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Stencil: 16

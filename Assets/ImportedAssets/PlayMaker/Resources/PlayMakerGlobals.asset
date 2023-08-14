@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 42938266, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: PlayMakerGlobals
+  m_EditorClassIdentifier: 
+  variables:
+    floatVariables:
+    - useVariable: 1
+      name: L-Joy_X-Axis
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: L-Joy_Y-Axis
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: L-Joy_XY-Float
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: R-Joy_X-Axis
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: R-Joy_Y-Axis
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: R-Joy_XY-Float
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Speed
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: L-JoyX-Magn-Float
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: L-JoyY-Magn-Float
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    intVariables: []
+    boolVariables:
+    - useVariable: 1
+      name: L-Joy_Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: A-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: B-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: X-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Y-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: LBumper
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: LTrigger-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: RBumper-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: RTrigger-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Start-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Select-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: R-Joy-Button
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Any Buttons
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    stringVariables: []
+    vector2Variables:
+    - useVariable: 1
+      name: L-Stick_Vector2
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {x: 0, y: 0}
+    - useVariable: 1
+      name: R-Joy_Vector2
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {x: 0, y: 0}
+    vector3Variables:
+    - useVariable: 1
+      name: L-JoyVector
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {x: 0, y: 0, z: 0}
+    - useVariable: 1
+      name: R-JoyVector
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {x: 0, y: 0, z: 0}
+    colorVariables: []
+    rectVariables: []
+    quaternionVariables: []
+    gameObjectVariables:
+    - useVariable: 1
+      name: PlayerTouchedBy_Ship
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    objectVariables: []
+    materialVariables: []
+    textureVariables: []
+    arrayVariables: []
+    enumVariables: []
+    categories:
+    - 
+    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  events: []

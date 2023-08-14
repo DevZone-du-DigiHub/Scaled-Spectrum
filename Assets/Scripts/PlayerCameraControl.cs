@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using System.Collections.Generic;
 
-public class PlayerCameraControl : MonoBehaviour
+public class PlayerAimControl : MonoBehaviour
 {
     [SerializeField] private InputAction lookAction;
     [SerializeField] private Transform aimSightTransform;
@@ -36,7 +38,8 @@ public class PlayerCameraControl : MonoBehaviour
     private void Start()
     {
         centerPosition = aimSightTransform.localPosition;
-        if(spriteRendererObject) {
+        if (spriteRendererObject)
+        {
             spriteRenderer = spriteRendererObject.GetComponent<SpriteRenderer>();
         }
     }
@@ -59,7 +62,8 @@ public class PlayerCameraControl : MonoBehaviour
         {
             transform.position = playerObject.transform.position;
         }
-        if(spriteRenderer) {
+        if (spriteRenderer)
+        {
             spriteRenderer.enabled = lookInput != Vector2.zero;
         }
     }
@@ -71,3 +75,4 @@ public class PlayerCameraControl : MonoBehaviour
         lookAction.canceled -= OnLookCanceled;
     }
 }
+

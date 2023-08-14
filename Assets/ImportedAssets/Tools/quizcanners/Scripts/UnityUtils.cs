@@ -2017,8 +2017,8 @@ namespace QuizCannersUtilities {
                 if (_failed) return true;
 
                 if (_request != null) {
-                    if (_request.isNetworkError || _request.isHttpError) {
-
+                    if (_request.result == UnityWebRequest.Result.ConnectionError || _request.result == UnityWebRequest.Result.ProtocolError)
+                    {
                         _failed = true;
 
 #if UNITY_EDITOR
