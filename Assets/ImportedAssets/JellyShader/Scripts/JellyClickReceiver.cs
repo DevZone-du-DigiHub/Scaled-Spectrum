@@ -1,27 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class JellyClickReceiver : MonoBehaviour {
-
+public class JellyClickReceiver : MonoBehaviour
+{
     RaycastHit hit;
     Ray clickRay;
 
     Renderer modelRenderer;
     float controlTime;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         modelRenderer = GetComponent<MeshRenderer>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         controlTime += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            clickRay = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
             if (Physics.Raycast(clickRay, out hit))
             {
@@ -33,5 +36,5 @@ public class JellyClickReceiver : MonoBehaviour {
         }
 
         modelRenderer.material.SetFloat("_ControlTime", controlTime);
-	}
+    }
 }

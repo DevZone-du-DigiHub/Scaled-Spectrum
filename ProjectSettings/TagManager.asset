@@ -4,11 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Particle
-  - Ship
-  - Projectile
   - Enemy
-  - Obstacle
   - Red
   - Green
   - Blue
@@ -21,21 +17,42 @@ TagManager:
   - yellowUnlocker
   - whiteUnlock
   - hazard
-  - enemy
-  - life
+  - WhiteP
+  - CyanP
+  - MagentaP
+  - YellowP
+  - player/core
+  - projectil/white
+  - projectil/cyan
+  - projectil/magenta
+  - projectil/yellow
+  - enemy/white
+  - enemy/red
+  - enemy/green
+  - enemy/blue
+  - obstacle
+  - heal/one
+  - heal/full
+  - heal/double
+  - hurt/one
+  - hurt/double
+  - hurt/triple
+  - hurt/full
+  - increase/maxhealth
+  - player/fx
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
   - Particles
   - Obstacle
-  - 2D Lights
-  - 3D Lights
+  - NPC/Enemies
+  - Lights
   - Projectils
-  - 
+  - Player
   - 
   - 
   - 

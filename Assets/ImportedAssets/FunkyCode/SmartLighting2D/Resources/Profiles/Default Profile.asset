@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightmapPresets:
     list:
-    - name: Default Lightmap
+    - name: Default
       type: 0
-      hdr: 2
+      hdr: 1
       darknessColor: {r: 0, g: 0, b: 0, a: 1}
       depth: -100
       resolution: 1
@@ -38,60 +38,41 @@ MonoBehaviour:
           sortingIgnore: 0
           shadowEffect: 2
           shadowEffectLayer: 0
-          maskLit: 1
-          maskLitDistance: 0
-        - layerID: 1
-          type: 0
-          sorting: 0
-          sortingIgnore: 0
-          shadowEffect: 8
-          shadowEffectLayer: 0
-          maskLit: 1
-          maskLitDistance: 0
-        - layerID: 2
-          type: 2
-          sorting: 0
-          sortingIgnore: 0
-          shadowEffect: 0
-          shadowEffectLayer: 0
-          maskLit: 1
-          maskLitDistance: 0
+          maskLit: 0
+          maskLitDistance: 1
   eventPresets:
     list:
     - name: Disabled
       layerSetting:
         list:
         - layerID: 0
-    - name: My Preset
+    - name: 'Preset (Id: 1)'
       layerSetting:
         list:
         - layerID: 0
-        - layerID: 1
-        - layerID: 2
   qualitySettings:
-    lightTextureSize: 2
-    lightEffectTextureSize: 2
-    lightFilterMode: 2
-    lightmapFilterMode: 2
+    lightTextureSize: 3
+    lightEffectTextureSize: 3
+    lightFilterMode: 1
+    lightmapFilterMode: 1
     updateMethod: 0
     coreAxis: 0
     projection: 0
   dayLightingSettings:
-    direction: 20
+    direction: 322
     ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    height: 2.2
+    height: 2.84
     bumpMap:
       height: 0.89
       strength: 1.55
   layers:
     colliderLayers:
       names:
-      - Layer 1
-      - Layer 2
-      - Lights Only
+      - Default
     lightLayers:
       names:
       - Default
+      - O
     dayLayers:
       names:
       - Default

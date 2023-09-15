@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19cefa3bf552f94390d1c272b19ea6e, type: 3}
   m_Name: XY
   m_EditorClassIdentifier: 
-  lightmapPresets:
+  bufferPresets:
     list:
     - name: Default
-      type: 0
-      hdr: 1
+      sortingLayer:
+        name: Default
+        Order: 0
       darknessColor: {r: 0, g: 0, b: 0, a: 1}
-      depth: -100
-      resolution: 1
+      lightingResolution: 1
       dayLayers:
         list:
-        - id: 0
+        - layer: 0
           type: 0
           sorting: 0
-      lightLayers:
+      nightLayers:
         list:
-        - id: 0
+        - layer: 0
           type: 0
           sorting: 0
   lightPresets:
@@ -41,40 +41,51 @@ MonoBehaviour:
           sortingIgnore: 0
           shadowEffect: 0
           shadowEffectLayer: 0
-          maskLit: 0
-          maskLitDistance: 1
+          maskEffect: 0
+          maskEffectDistance: 1
   eventPresets:
     list:
     - name: 
-      layerSetting:
-        list:
-        - layerID: 0
-    - name: Default
+      useColliders: 0
+      useTilemapColliders: 0
       layerSetting:
         list:
         - layerID: 0
   qualitySettings:
-    lightTextureSize: 2
-    lightEffectTextureSize: 1
-    lightFilterMode: 0
-    lightmapFilterMode: 0
+    HDR: 1
+    lightTextureSize: 1
+    lightFilterMode: 1
     updateMethod: 0
     coreAxis: 0
-    projection: 0
   dayLightingSettings:
-    direction: 139
-    ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    enable: 0
+    alpha: 1
+    direction: 270
     height: 1
+    softness:
+      enable: 1
+      intensity: 0.5
     bumpMap:
       height: 1
       strength: 1
+  fogOfWar:
+    filterMode: 1
+    enabled: 0
+    useOnlyInPlay: 0
+    bufferID: 0
+    sorting: 0
+    resolution: 1
+    sortingLayer:
+      name: Default
+      Order: 0
   layers:
-    colliderLayers:
+    lightLayers:
       names:
       - Default
-    lightLayers:
+    nightLayers:
       names:
       - Default
     dayLayers:
       names:
       - Default
+  disable: 0

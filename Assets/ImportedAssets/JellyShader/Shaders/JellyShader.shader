@@ -1,97 +1,121 @@
-﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
+﻿Shader "Custom/JellyWaterDropShader" {
+    Properties {
+        _Color ("Color", Color) = (1, 1, 1, 1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0, 1)) = 0.5
+        _Metallic ("Metallic", Range(0, 1)) = 0.0
 
-Shader "Custom/JellyShader" {
-	Properties {
-		_Color ("Color", Color) = (1,1,1,1)
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_Glossiness ("Smoothness", Range(0,1)) = 0.5
-		_Metallic ("Metallic", Range(0,1)) = 0.0
+        _ControlTime ("Time", Range(0, 10)) = 0
+        _ModelOrigin ("Model Origin", Vector) = (0, 0, 0)
+        _ImpactOrigin ("Impact Origin", Vector) = (-5, 0, 0)
 
-		_ControlTime ("Time", float) = 0
-		_ModelOrigin ("Model Origin", Vector) = (0,0,0,0)
-		_ImpactOrigin ("Impact Origin", Vector) = (-5,0,0,0)
+        _Frequency ("Frequency", Range(0, 1000)) = 10
+        _Amplitude ("Amplitude", Range(0, 5)) = 0.1
+        _WaveFalloff ("Wave Falloff", Range(1, 8)) = 4
+        _MaxWaveDistortion ("Max Wave Distortion", Range(0.1, 2.0)) = 1
+        _ImpactSpeed ("Impact Speed", Range(0, 10)) = 0.5
+        _WaveSpeed ("Wave Speed", Range(-10, 10)) = -5
 
-		_Frequency ("Frequency", Range(0, 1000)) = 10
-		_Amplitude ("Amplitude", Range(0, 5)) = 0.1
-		_WaveFalloff ("Wave Falloff", Range(1, 8)) = 4
-		_MaxWaveDistortion ("Max Wave Distortion", Range(0.1, 2.0)) = 1
-		_ImpactSpeed ("Impact Speed", Range(0, 10)) = 0.5
-		_WaveSpeed ("Wave Speed", Range(-10, 10)) = -5
-	}
-	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
-		
-		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows addshadow vertex:vert
+        _Transparency ("Transparency", Range(0, 1)) = 1
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		#pragma target 3.0
+        _Emission ("Emission", Range(0, 1)) = 0
+        _WaveDirection ("Wave Direction", Vector) = (1, 0, 0)
 
-		sampler2D _MainTex;
+        _RefractionStrength ("Refraction Strength", Range(0, 1)) = 0.1
+        _ReflectionStrength ("Reflection Strength", Range(0, 1)) = 0.1
+        _WaveSpeed ("Water Wave Speed", Range(0, 5)) = 1
+    }
+    SubShader {
+        Tags { "Queue" = "Transparent" "RenderType" = "Transparent" }
+        LOD 200
 
-		struct Input {
-			float2 uv_MainTex;
-		};
+        Pass {
+            CGPROGRAM
+// Upgrade NOTE: excluded shader from DX11; has structs without semantics (struct v2f members uv_MainTex,viewDir,normalDir)
+#pragma exclude_renderers d3d11
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
 
-		half _Glossiness;
-		half _Metallic;
-		fixed4 _Color;
+            sampler2D _MainTex;
 
-		float _ControlTime;
-		float4 _ModelOrigin;
-		float4 _ImpactOrigin;
+            struct appdata_t {
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                float4 tangent : TANGENT;
+                float4 texcoord1 : TEXCOORD0;
+                float4 texcoord2 : TEXCOORD1;
+            };
 
-		half _Frequency; //Base frequency for our waves.
-		half _Amplitude; //Base amplitude for our waves.
-		half _WaveFalloff; //How quickly our distortion should fall off given distance.
-		half _MaxWaveDistortion; //Smaller number here will lead to larger distortion as the vertex approaches origin.
-		half _ImpactSpeed; //How quickly our wave origin moves across the sphere.
-		half _WaveSpeed; //Oscillation speed of an individual wave.
+            struct v2f {
+                float2 uv_MainTex;
+                float3 viewDir;
+                float3 normalDir;
+                float4 texcoord1 : TEXCOORD0;
+                float4 texcoord2 : TEXCOORD1;
+                float4 vertex : SV_POSITION;
+            };
 
-		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-		// #pragma instancing_options assumeuniformscaling
-		UNITY_INSTANCING_BUFFER_START(Props)
-			// put more per-instance properties here
-		UNITY_INSTANCING_BUFFER_END(Props)
+            half _Glossiness;
+            half _Metallic;
+            fixed4 _Color;
 
-		void vert (inout appdata_base v) {
-			float4 world_space_vertex = mul(unity_ObjectToWorld, v.vertex);
+            float _ControlTime;
+            float3 _ModelOrigin;
+            float3 _ImpactOrigin;
 
-			float4 direction = normalize(_ModelOrigin - _ImpactOrigin);
-			float4 origin = _ImpactOrigin + _ControlTime * _ImpactSpeed * direction;
-			
-			//Get the distance in world space from our vertex to the wave origin.
-			float dist = distance(world_space_vertex, origin);
+            half _Frequency;
+            half _Amplitude;
+            half _WaveFalloff;
+            half _MaxWaveDistortion;
+            half _ImpactSpeed;
+            half _WaveSpeed;
 
-			//Adjust our distance to be non-linear.
-			dist = pow(dist, _WaveFalloff);
+            half _Transparency;
 
-			//Set the max amount a wave can be distorted based on distance.
-			dist = max(dist, _MaxWaveDistortion);
+            half _Emission;
+            float3 _WaveDirection;
 
-			//Convert direction and _ImpactOrigin to model space for later trig magic.
-			float4 l_ImpactOrigin = mul(unity_WorldToObject, _ImpactOrigin);
-			float4 l_direction = mul(unity_WorldToObject, direction);
+            half _RefractionStrength;
+            half _ReflectionStrength;
+            half _WaterWaveSpeed;
 
-			//Magic
-			float impactAxis = l_ImpactOrigin + dot((v.vertex - l_ImpactOrigin), l_direction);
+            v2f vert (appdata_t v) {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv_MainTex = v.texcoord1.xy;
+                o.viewDir = normalize(UnityWorldSpaceViewDir(v.vertex));
+                o.normalDir = normalize(UnityObjectToWorldNormal(v.normal));
+                o.texcoord1 = v.texcoord1;
+                o.texcoord2 = v.texcoord2;
+                return o;
+            }
 
-			v.vertex.xyz += v.normal * sin(impactAxis * _Frequency + _ControlTime * _WaveSpeed) * _Amplitude * (1 / dist);
-		}
+            fixed4 frag (v2f i) : SV_Target {
+                // Water drop distortion
+                float2 waterDistortion = tex2D(_MainTex, i.uv_MainTex).rg;
+                float2 refractionOffset = waterDistortion * _RefractionStrength;
+                float2 reflectionOffset = reflect(i.uv_MainTex - 0.5, float2(0, 1)) * _ReflectionStrength;
+                float waterWaveOffset = sin(_Time.y * _WaterWaveSpeed);
+                float2 finalOffset = refractionOffset + reflectionOffset + float2(0, waterWaveOffset);
 
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-			// Metallic and smoothness come from slider variables
-			o.Metallic = _Metallic;
-			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
-		}
-		ENDCG
-	}
-	FallBack "Diffuse"
+                // Original Jelly distortion
+                fixed4 c = tex2Dlod(_MainTex, float4(i.uv_MainTex + finalOffset, 0, 0));
+                half3 displacement = normalize(mul(unity_WorldToObject, _WaveDirection));
+                i.normalDir = lerp(i.normalDir, displacement, _Amplitude);
+
+                // Combine water and jelly distortion
+                SurfaceOutputStandard o;
+                o.Albedo = c.rgb * _Color.rgb;
+                o.Specular = _Metallic;
+                o.Smoothness = _Glossiness;
+                o.Normal = i.normalDir;
+                o.Alpha = c.a * _Transparency;
+
+                return LightingStandard(i, o);
+            }
+            ENDCG
+        }
+    }
+    FallBack "Diffuse"
 }

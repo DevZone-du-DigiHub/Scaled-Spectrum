@@ -1,0 +1,155 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class Player_Movements : MonoBehaviour
+{
+    [Header("Movement Settings")]
+    [SerializeField] private float forwardSpeed = 10.0f;
+    [SerializeField] private float backwardSpeed = 5.0f;
+    [SerializeField] private float sidewaysSpeed = 7.0f;
+
+    [Header("Dodge Settings")]
+    [SerializeField] private float dodgeForce = 20f; // Force applied during dodge
+    [SerializeField] private float dodgeDuration = 0.2f; // Duration of the dodge
+    [SerializeField] private float dodgeCooldown = 1f; // Cooldown time between dodges
+
+    [Header("Input Settings")]
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private InputActionReference movementAction;
+    [SerializeField] private InputActionReference rightStickAction;
+    [SerializeField] private InputActionReference dodgeAction;
+
+    [Header("Camera Settings")]
+    [SerializeField] private Transform mainCameraTransform;
+
+    [Header("Animator Settings")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private string yAnimParam = "L-Joy-Y_anim";
+    [SerializeField] private string xAnimParam = "L-Joy-X_anim";
+    [SerializeField] private string isDodgeAnimParam = "IsDodge";
+
+    private Rigidbody2D rb;
+    private Vector2 currentMovement = Vector2.zero;
+    private bool isRightStickActive = false;
+    private bool isDodging = false;
+    private float dodgeCooldownTimer = 0f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        movementAction.action.performed += ctx => SetMovement(ctx.ReadValue<Vector2>());
+        movementAction.action.canceled += ctx => SetMovement(Vector2.zero);
+
+        rightStickAction.action.performed += ctx => isRightStickActive = true;
+        rightStickAction.action.canceled += ctx => isRightStickActive = false;
+
+        dodgeAction.action.performed += _ => TryPerformDodge();
+
+        movementAction.action.Enable();
+        rightStickAction.action.Enable();
+        dodgeAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        movementAction.action.performed -= ctx => SetMovement(ctx.ReadValue<Vector2>());
+        movementAction.action.canceled -= ctx => SetMovement(Vector2.zero);
+
+        rightStickAction.action.performed -= ctx => isRightStickActive = true;
+        rightStickAction.action.canceled -= ctx => isRightStickActive = false;
+
+        dodgeAction.action.performed -= _ => TryPerformDodge();
+
+        movementAction.action.Disable();
+        rightStickAction.action.Disable();
+        dodgeAction.action.Disable();
+    }
+
+    void FixedUpdate()
+    {
+        MoveCharacter();
+    }
+
+    void Update()
+    {
+        UpdateAnimatorParameters();
+
+        if (dodgeCooldownTimer > 0f)
+        {
+            dodgeCooldownTimer -= Time.deltaTime;
+        }
+    }
+
+    void SetMovement(Vector2 movement)
+    {
+        currentMovement = movement;
+    }
+
+    void MoveCharacter()
+    {
+        Vector2 desiredDirection = (mainCameraTransform.up * currentMovement.y + mainCameraTransform.right * currentMovement.x).normalized;
+        float angleToForward = Vector2.Angle(transform.up, desiredDirection);
+
+        float speedMultiplier;
+        if (isRightStickActive)
+        {
+            if (angleToForward < 45) // Mostly forward
+                speedMultiplier = forwardSpeed;
+            else if (angleToForward > 135) // Mostly backward
+                speedMultiplier = backwardSpeed;
+            else // Mostly sideways
+                speedMultiplier = sidewaysSpeed;
+
+            rb.velocity = desiredDirection * speedMultiplier;
+        }
+        else
+        {
+            rb.velocity = desiredDirection * forwardSpeed; // Use forward speed when the right stick isn't active
+        }
+    }
+
+    void UpdateAnimatorParameters()
+    {
+        if (animator)
+        {
+            animator.SetFloat(xAnimParam, currentMovement.x);
+            animator.SetFloat(yAnimParam, currentMovement.y);
+            animator.SetBool(isDodgeAnimParam, isDodging);
+        }
+    }
+
+    void TryPerformDodge()
+    {
+        if (!isDodging && dodgeCooldownTimer <= 0f)
+        {
+            StartCoroutine(PerformDodge());
+        }
+    }
+
+    IEnumerator PerformDodge()
+    {
+        isDodging = true;
+        rb.velocity = Vector2.zero;
+
+        float startTime = Time.time;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < dodgeDuration)
+        {
+            float normalizedTime = elapsedTime / dodgeDuration;
+            float currentDodgeForce = Mathf.Lerp(dodgeForce, 0f, normalizedTime); // Gradually reduce the force over time
+            rb.AddForce(currentMovement.normalized * currentDodgeForce);
+
+            elapsedTime = Time.time - startTime;
+            yield return null;
+        }
+
+        isDodging = false;
+        dodgeCooldownTimer = dodgeCooldown;
+    }
+}

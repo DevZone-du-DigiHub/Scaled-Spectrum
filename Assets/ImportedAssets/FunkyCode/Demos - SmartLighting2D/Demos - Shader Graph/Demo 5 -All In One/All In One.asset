@@ -16,7 +16,6 @@ MonoBehaviour:
     list:
     - name: Day Lighting
       type: 3
-      hdr: 0
       darknessColor: {r: 0, g: 0, b: 0, a: 1}
       depth: -100
       resolution: 1
@@ -32,7 +31,6 @@ MonoBehaviour:
           sorting: 0
     - name: Lights
       type: 0
-      hdr: 0
       darknessColor: {r: 0, g: 0, b: 0, a: 1}
       depth: -100
       resolution: 1
@@ -45,7 +43,6 @@ MonoBehaviour:
           sorting: 0
     - name: Occlusion
       type: 0
-      hdr: 0
       darknessColor: {r: 0, g: 0, b: 0, a: 1}
       depth: -100
       resolution: 1
@@ -58,7 +55,7 @@ MonoBehaviour:
           sorting: 0
   lightPresets:
     list:
-    - name: Optimised
+    - name: Default
       layerSetting:
         list:
         - layerID: 0
@@ -75,39 +72,29 @@ MonoBehaviour:
       layerSetting:
         list:
         - layerID: 0
-    - name: Shadow Layer 1
+    - name: Default
       layerSetting:
         list:
         - layerID: 0
-    - name: Shadow Layer 2
-      layerSetting:
-        list:
-        - layerID: 1
-    - name: Shadow Layer 3
-      layerSetting:
-        list:
-        - layerID: 2
   qualitySettings:
-    lightTextureSize: 3
-    lightEffectTextureSize: 3
-    lightFilterMode: 2
-    lightmapFilterMode: 2
+    HDR: 1
+    lightTextureSize: 1
+    lightEffectTextureSize: 1
+    lightFilterMode: 1
     updateMethod: 0
     coreAxis: 0
     projection: 0
   dayLightingSettings:
-    direction: 147
-    ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    height: 1.96
+    alpha: 1
+    direction: 38
+    height: 1
     bumpMap:
-      height: 1.89
-      strength: 0.67
+      height: 1
+      strength: 1
   layers:
     colliderLayers:
       names:
-      - Collider Layer 1
-      - Collider Layer 2
-      - Collider Layer 3
+      - Default
     lightLayers:
       names:
       - Lights

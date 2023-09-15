@@ -1,5 +1,121 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &117331502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117331503}
+  m_Layer: 0
+  m_Name: RaySpell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &117331503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117331502}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.03, y: 3.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1309610068}
+  m_Father: {fileID: 7863479820597599412}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &287856308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287856309}
+  - component: {fileID: 287856310}
+  m_Layer: 0
+  m_Name: Shoulder_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &287856309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287856308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.1, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 0}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1882434311}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &287856310
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287856308}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 06a28efc47910ae4597364b8300878b7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 1320761043, guid: 5371c4b3d3c3928489c819f89a4fd16b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.11}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &844773660
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +128,7 @@ GameObject:
   - component: {fileID: 844773662}
   - component: {fileID: 844773661}
   - component: {fileID: 2331313988377312037}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,14 +238,14 @@ MonoBehaviour:
   shadowType: 1
   shadowLayer: 0
   shadowDistance: 1
-  shadowDistanceMin: 0
-  shadowDistanceMax: 2.9927454
-  shadowTranslucency: 0.498
+  shadowDistanceMin: 0.025377482
+  shadowDistanceMax: 1.7481339
+  shadowTranslucency: 0.4
   maskType: 3
-  maskLit: 4
+  maskLit: 0
   maskPivot: 1
   maskLayer: 0
-  maskLitCustom: 0.427
+  maskLitCustom: 0.894
   bumpMapMode:
     type: 0
     textureType: 0
@@ -144,6 +260,238 @@ MonoBehaviour:
     maskType: 3
     maskPivot: 1
     transform: {fileID: 844773663}
+--- !u!1 &958114903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958114904}
+  - component: {fileID: 958114905}
+  m_Layer: 0
+  m_Name: SelfLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958114904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958114903}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.14, y: 0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1882434311}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &958114905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958114903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a34663ca705a54eac3205e225a6d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightType: 1
+  lightPresetId: 0
+  eventPresetId: 0
+  lightLayer: -1
+  occlusionLayer: 1
+  translucentLayer: 0
+  translucentPresetId: 0
+  color: {r: 0.5, g: 0.5, b: 0.5, a: 0.758}
+  size: 1.7
+  spotAngleInner: 360
+  spotAngleOuter: 360
+  coreSize: 0.5
+  falloff: 0
+  lightStrength: 0
+  outerAngle: 15
+  lightRadius: 1
+  shadowDistanceClose: 0
+  shadowDistanceFar: 5
+  maskTranslucencyQuality: 1
+  maskTranslucencyStrength: 0.5
+  applyRotation: 0
+  textureSize: 1
+  meshMode:
+    enable: 0
+    alpha: 0
+    shader: 0
+    materials:
+    - {fileID: 0}
+    sortingLayer:
+      name: Default
+      Order: 5
+  bumpMap:
+    intensity: 1
+    depth: 1
+  whenInsideCollider: 1
+  lightSprite: 0
+  sprite: {fileID: 21300000, guid: 6592d6be03fd808449716a11558d506f, type: 3}
+  spriteFlipX: 0
+  spriteFlipY: 0
+  freeFormFalloff: 1
+  freeFormPoint: 1
+  freeFormFalloffStrength: 1
+  freeFormPoints:
+    points:
+    - {x: 1, y: 0}
+    - {x: -0.50000006, y: 0.8660254}
+    - {x: -0.4999999, y: -0.86602545}
+  drawingEnabled: 1
+  drawingTranslucencyEnabled: 0
+--- !u!1 &1309610064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309610068}
+  - component: {fileID: 1309610067}
+  - component: {fileID: 1309610066}
+  - component: {fileID: 1309610065}
+  m_Layer: 0
+  m_Name: SpellRays2D
+  m_TagString: player/fx
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1309610068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309610064}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: -4.9700003, y: -2.6799998, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.97, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 117331503}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!33 &1309610067
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309610064}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1309610066
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309610064}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1309610065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309610064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3eef6c7ecda590448d3132c3f0b2f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color1: {r: 1, g: 1, b: 1, a: 1}
+  color2: {r: 1, g: 1, b: 1, a: 0}
+  speed: 5
+  size: 30
+  skew: -1
+  shear: 0
+  fade: 0
+  contrast: 9.5
+  sortingLayer: 0
+  orderInLayer: -1
+--- !u!1 &1882434310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882434311}
+  m_Layer: 0
+  m_Name: Gear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882434311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882434310}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 287856309}
+  - {fileID: 958114904}
+  m_Father: {fileID: 7863479820597599412}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937999133171173872
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937999133171173872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 0.42, z: 0}
+  m_LocalPosition: {x: 0.27, y: 0.3, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -311,11 +659,11 @@ MonoBehaviour:
   shadowType: 1
   shadowLayer: 0
   shadowDistance: 1
-  shadowDistanceMin: 0
-  shadowDistanceMax: 2.9927454
-  shadowTranslucency: 0.498
+  shadowDistanceMin: 0.025377488
+  shadowDistanceMax: 1.7481338
+  shadowTranslucency: 0.4
   maskType: 3
-  maskLit: 4
+  maskLit: 0
   maskPivot: 1
   maskLayer: 0
   maskLitCustom: 0.427
@@ -344,7 +692,6 @@ GameObject:
   - component: {fileID: 1937999134790266786}
   - component: {fileID: 1937999134790266844}
   - component: {fileID: 1937999134790266787}
-  - component: {fileID: 1053512919}
   m_Layer: 5
   m_Name: The Shooter
   m_TagString: Untagged
@@ -431,10 +778,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46d0967557764f479c854648f3dd079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteProjectile: {fileID: 2040062930515097035, guid: 4fb7aedac2719a74db32224b25abbd6a, type: 3}
-  cyanProjectile: {fileID: 17893257177138375, guid: 389fa74eb5b58474380e3d8994f6b8b3, type: 3}
-  magentaProjectile: {fileID: 511128291734320910, guid: 9ddcdbd50cb736248ad3e3b37671e589, type: 3}
-  yellowProjectile: {fileID: 9029059139247476974, guid: d2c2be865885ebf4fbf7ed5be94949ad, type: 3}
+  whiteProjectile: {fileID: 8689856013658570318, guid: 1a74286e03b781149a63d74446f058c0, type: 3}
+  cyanProjectile: {fileID: 4225894013780814674, guid: 64cab3ee40256d0478fdd8c61c11d7b7, type: 3}
+  magentaProjectile: {fileID: 8250104135337760476, guid: f07eb9f0f88663e4fbee62afd080413e, type: 3}
+  yellowProjectile: {fileID: 7586000203593452142, guid: 62e47523f13c7094abf4f9696ec0bf32, type: 3}
   projectileSpeed: 30
   shootAction:
     m_Name: Shoot
@@ -457,438 +804,6 @@ MonoBehaviour:
   muzzleFlashParticle: {fileID: 0}
   shootingAudioSource: {fileID: 0}
   spawnPoint: {fileID: 6291019226704534241}
---- !u!114 &1053512919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937999134790266785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsm:
-    dataVersion: 2
-    usedInTemplate: {fileID: 0}
-    name: Shooting_sounds
-    startState: The Gun
-    states:
-    - name: The Gun
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 64
-        y: 112
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: RT_Input
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Gun Shot
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.InvokeMethod
-        - HutongGames.PlayMaker.Actions.PlayerInputTriggeredEvent
-        customNames:
-        - 
-        - 
-        actionEnabled: 0001
-        actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 59f9a004d864fa04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 5070574645754524253}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 5070574645754524253}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: ColorProgress
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: SetWhiteColor
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.InputSystem.InputActionReference
-          value: {fileID: 461141580821488106, guid: 0fca43ab3cdced24d86dea89af2b9228, type: 3}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: RTrigger-Button
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - RT_Input
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1400000012000000120000000f000000110000000f0000001100000017000000110000001400000018000000
-        paramName:
-        - gameObject
-        - behaviour
-        - methodName
-        - delay
-        - repeating
-        - repeatDelay
-        - cancelOnExit
-        - sendEvent
-        - storeValue
-        - gameObject
-        - inputAction
-        paramDataPos: 0000000000000000010000000000000000000000010000000100000000000000020000000100000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: Gun Shot
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 272
-        y: 128
-        width: 106
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: RT_Released
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: The Gun
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.CreateObject
-        - HutongGames.PlayMaker.Actions.BoolTest
-        - HutongGames.PlayMaker.Actions.SetVelocity2d
-        - HutongGames.PlayMaker.Actions.PlaySound
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 00010001
-        actionIsOpen: 01000101
-        actionStartIndex: 00000000060000000a00000010000000
-        actionHashCodes: 60532301a4c8bf0068fde3049cdc3905
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 1937999133171173872}
-        - useVariable: 1
-          name: One Bullet
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: One Bullet
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 10e53b859a8c39841b6986ba0acf69bb, type: 3}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 10
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.87931037
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: RTrigger-Button
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - 
-        - RT_Released
-        byteData: 010100000001
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1300000013000000130000001c0000001c000000130000001100000017000000170000000100000014000000250000000f0000000f0000000700000001000000140000001c000000180000000f000000
-        paramName:
-        - gameObject
-        - parent
-        - spawnPoint
-        - position
-        - rotation
-        - storeObject
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        - gameObject
-        - vector
-        - x
-        - y
-        - space
-        - everyFrame
-        - gameObject
-        - position
-        - clip
-        - volume
-        paramDataPos: 0000000001000000020000000000000001000000030000000000000000000000010000000000000000000000000000000000000001000000010000000500000001000000020000000000000002000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000040000000100000000000000000000000000000000000000
-    events:
-    - name: RT_Input
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: RT_Released
-      isSystemEvent: 0
-      isGlobal: 0
-    globalTransitions: []
-    variables:
-      floatVariables: []
-      intVariables: []
-      boolVariables:
-      - useVariable: 1
-        name: RT_Press
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      stringVariables: []
-      vector2Variables: []
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables:
-      - useVariable: 1
-        name: One Bullet
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {fileID: 0}
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-      arrayVariables: []
-      enumVariables: []
-      categories:
-      - 
-      variableCategoryIDs: 0000000000000000
-    description: 
-    docUrl: 
-    showStateLabel: 0
-    maxLoopCount: 0
-    watermark: 
-    password: 
-    locked: 0
-    manualUpdate: 0
-    outVariableIndices: 
-    keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
-    ExposedEvents: []
-    OutputEvents: []
-    RestartOnEnable: 1
-    ResetVariablesOnEnable: 0
-    EnableDebugFlow: 0
-    EnableBreakpoints: 1
-    editorFlags: 225
-    activeStateName: 
-    mouseEvents: 0
-    handleLevelLoaded: 0
-    handleTriggerEnter2D: 0
-    handleTriggerExit2D: 0
-    handleTriggerStay2D: 0
-    handleCollisionEnter2D: 0
-    handleCollisionExit2D: 0
-    handleCollisionStay2D: 0
-    handleTriggerEnter: 0
-    handleTriggerExit: 0
-    handleTriggerStay: 0
-    handleCollisionEnter: 0
-    handleCollisionExit: 0
-    handleCollisionStay: 0
-    handleParticleCollision: 0
-    handleControllerColliderHit: 0
-    handleJointBreak: 0
-    handleJointBreak2D: 0
-    handleOnGUI: 0
-    handleFixedUpdate: 0
-    handleLateUpdate: 0
-    handleApplicationEvents: 0
-    handleUiEvents: 0
-    handleLegacyNetworking: 0
-    handleAnimatorMove: 0
-    handleAnimatorIK: 0
-  fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
 --- !u!1 &5070574645754524253
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,19 +817,17 @@ GameObject:
   - component: {fileID: 4158555829924889026}
   - component: {fileID: 1526835348989976615}
   - component: {fileID: 3214852259247001906}
-  - component: {fileID: 4158555829924889031}
   - component: {fileID: 4158555829924889034}
-  - component: {fileID: 1925450035}
-  - component: {fileID: 1925450017}
+  - component: {fileID: 4158555829924889031}
   - component: {fileID: 1925450018}
   - component: {fileID: 9005474658407881513}
   - component: {fileID: 1908668587}
   - component: {fileID: 1908668604}
   - component: {fileID: 1231332972}
   - component: {fileID: 1925852637}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: BlobPlayer
-  m_TagString: Player
+  m_TagString: player/core
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,6 +848,8 @@ Transform:
   - {fileID: 1937999133171173871}
   - {fileID: 1937999134790266786}
   - {fileID: 6291019226704534241}
+  - {fileID: 117331503}
+  - {fileID: 1882434311}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1436,204 +1351,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!114 &4158555829924889031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5070574645754524253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 0fca43ab3cdced24d86dea89af2b9228, type: 3}
-  m_NotificationBehavior: 1
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fbc22107-723a-4e09-af4d-f56e74337a6d
-    m_ActionName: Player/[L-Joy] Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 470d232b-35d9-43d5-ba06-3eaadc01758d
-    m_ActionName: Player/[L-JoyPress][/XInputControllerWindows/leftStickPress]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9031724b-135b-46ba-9826-ae46aa3f70cb
-    m_ActionName: Player/[R-Joy] Look[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2422450f-fecc-4701-aabd-c7b2f24986cb
-    m_ActionName: Player/[RJoyPress][/XInputControllerWindows/rightStickPress]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9012e352-3378-4381-bf56-e7d934a54c7d
-    m_ActionName: Player/[X][/XInputControllerWindows/buttonWest]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ed73a9fe-ac64-407b-912c-270f0d296885
-    m_ActionName: Player/[A][/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d489f309-2e55-4598-9299-b4c16c354615
-    m_ActionName: Player/[B][/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e6c9b7c1-d026-4b9c-ab23-cb3d7dbf927c
-    m_ActionName: Player/[Y][/XInputControllerWindows/buttonNorth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fd968b01-a2e2-4ad0-bfe8-1decc40374e1
-    m_ActionName: Player/[LB] ColourSelect[/XInputControllerWindows/leftShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bbc88d68-6b08-4c26-ae0c-ba36c29f55a3
-    m_ActionName: Player/[RB] Absorb[/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 124615d0-fd5d-476d-9b07-5a4c2abc1685
-    m_ActionName: Player/[LT][/XInputControllerWindows/leftTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2558eefa-244c-454d-911b-f67a169d38a6
-    m_ActionName: Player/[RT] Shoot[/XInputControllerWindows/rightTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e995b6f8-ca13-438b-b434-0fba2efd9239
-    m_ActionName: Player/[Select] Map[/XInputControllerWindows/select]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a7147c73-e1a6-4ecc-a367-35f4c764467a
-    m_ActionName: Player/[Start] Pause[/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 571d4482-e64c-4013-9543-9386261f8cfb
-    m_ActionName: Title Screen/[L-Joy] Menu Nav[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 45f68da0-77d8-4363-a736-fa8985f35862
-    m_ActionName: Title Screen/[L-JoyPress][/XInputControllerWindows/leftStickPress]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 506a52b5-3fcb-423c-8035-d8f17d1b0fa3
-    m_ActionName: Title Screen/[R-Joy][/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4b52a1db-eaf4-422b-854c-57346b00fd1a
-    m_ActionName: Title Screen/[RJoyPress][/XInputControllerWindows/rightStickPress]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4763295e-5eb9-4dca-a04a-6c26e6c0a928
-    m_ActionName: Title Screen/[X][/XInputControllerWindows/buttonWest]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 084b343d-4bef-4562-972c-6726963a6d12
-    m_ActionName: Title Screen/[A] Accept[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: befd6da8-ae82-4d65-ad3a-618d94f921d0
-    m_ActionName: Title Screen/[B] Back[/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ef948ee3-c416-4613-afe6-68c46a4b5c10
-    m_ActionName: Title Screen/[Y][/XInputControllerWindows/buttonNorth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e07f0b22-f2a2-48cf-b631-fa24ff5f5c8b
-    m_ActionName: Title Screen/[LB] Left Tab[/XInputControllerWindows/leftShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 468cf3fe-8492-4638-8d78-ce13451e3a11
-    m_ActionName: Title Screen/[RB] Right Tab[/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 884eff75-246c-4ecf-adbd-a20a6cd723a3
-    m_ActionName: Title Screen/[LT][/XInputControllerWindows/leftTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6af75a79-0b11-4e9f-bfbe-99bc6c5f341f
-    m_ActionName: Title Screen/[RT][/XInputControllerWindows/rightTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bee279f6-d14d-4a93-ac4a-606cb7f1d489
-    m_ActionName: Title Screen/[Select][/XInputControllerWindows/select]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d372b36e-3a3d-4802-a42f-711acd0a0959
-    m_ActionName: Title Screen/[Start][/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 68dcc5de-5089-4f17-8b44-0ba777bc84ef
-    m_ActionName: Pause Menu/[L-Joy] Menu Nav[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 219f9239-d6d3-4bc9-86d6-0718adb62af7
-    m_ActionName: Pause Menu/[L-JoyPress][/XInputControllerWindows/leftStickPress]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 31f5e4fb-57f2-4d23-b036-a446b7cda234
-    m_ActionName: Pause Menu/[R-Joy][/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f36cf0c6-dba5-4617-8d67-6f39e46b7a22
-    m_ActionName: Pause Menu/[RJoyPress][/XInputControllerWindows/rightStickPress]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ee5b18ac-c599-44d5-96a5-8699c43bc86d
-    m_ActionName: Pause Menu/[X][/XInputControllerWindows/buttonWest]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c95a312f-f42d-4f8b-8e0e-fe92b78b2783
-    m_ActionName: Pause Menu/[A] Accept[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 14abf23f-dd4e-4db5-a07b-2d77e988b90b
-    m_ActionName: Pause Menu/[B] Back[/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 89698848-98cf-4d43-939e-25549ae0fe8a
-    m_ActionName: Pause Menu/[Y][/XInputControllerWindows/buttonNorth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 631c4acd-cee1-4050-9fbb-28d22a9726fc
-    m_ActionName: Pause Menu/[LB] Left Tab[/XInputControllerWindows/leftShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: dabd8c9c-8c27-4b4e-89f2-57969e41be18
-    m_ActionName: Pause Menu/[RB] Right Tab[/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b91d11b5-af80-45ea-9424-ed58f4fb8ec2
-    m_ActionName: Pause Menu/[LT][/XInputControllerWindows/leftTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0c9f836c-97fc-46b9-ba21-43828e7d9c1d
-    m_ActionName: Pause Menu/[RT][/XInputControllerWindows/rightTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f1551bd0-4163-4675-bd27-799f7841f071
-    m_ActionName: Pause Menu/[Select][/XInputControllerWindows/select]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9b608b52-fcb0-4af4-8687-4e86be52989f
-    m_ActionName: Pause Menu/[Start] Unpause[/XInputControllerWindows/start]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &4158555829924889034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3016,977 +2733,204 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!114 &1925450035
+--- !u!114 &4158555829924889031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5070574645754524253}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsm:
-    dataVersion: 2
-    usedInTemplate: {fileID: 0}
-    name: '[LB] ColorChanger On/Off'
-    startState: outShip
-    states:
-    - name: outShip
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 64
-        y: 112
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: LB_On
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: inShip
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.BoolTest
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.EnableFSM
-        customNames:
-        - 
-        - Enable The Shooter Object
-        - Disable inShipColorwheel
-        actionEnabled: 010100
-        actionIsOpen: 000101
-        actionStartIndex: 000000000400000009000000
-        actionHashCodes: a4c8bf00b2cf100087aa9700
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 1937999134790266785}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: LBumper
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - LB_On
-        - 
-        byteData: 010001
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 11000000170000001700000001000000140000001100000011000000010000000100000014000000120000001100000011000000
-        paramName:
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - fsmName
-        - enable
-        - resetOnExit
-        paramDataPos: 00000000000000000100000000000000000000000100000002000000010000000200000001000000000000000300000004000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000
-    - name: inShip
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 272
-        y: 112
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: LB_Off
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: outShip
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.EnableFSM
-        - HutongGames.PlayMaker.Actions.BoolTest
-        customNames:
-        - 
-        - Enable inShipColorwheel
-        - 
-        actionEnabled: 010001
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000009000000
-        actionHashCodes: b2cf100087aa9700a4c8bf00
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 1937999134790266785}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: LBumper
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - 
-        - LB_Off
-        byteData: 000101
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 14000000110000001100000001000000010000001400000012000000110000001100000011000000170000001700000001000000
-        paramName:
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - fsmName
-        - enable
-        - resetOnExit
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        paramDataPos: 00000000000000000100000000000000010000000100000000000000020000000300000004000000000000000100000002000000
-        paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000001000000
-    events:
-    - name: LB_On
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: LB_Off
-      isSystemEvent: 0
-      isGlobal: 0
-    globalTransitions: []
-    variables:
-      floatVariables: []
-      intVariables: []
-      boolVariables: []
-      stringVariables: []
-      vector2Variables: []
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables: []
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-      arrayVariables: []
-      enumVariables: []
-      categories:
-      - 
-      variableCategoryIDs: 
-    description: 
-    docUrl: 
-    showStateLabel: 0
-    maxLoopCount: 0
-    watermark: 
-    password: 
-    locked: 0
-    manualUpdate: 0
-    outVariableIndices: 
-    keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
-    ExposedEvents: []
-    OutputEvents: []
-    RestartOnEnable: 1
-    ResetVariablesOnEnable: 0
-    EnableDebugFlow: 0
-    EnableBreakpoints: 1
-    editorFlags: 224
-    activeStateName: 
-    mouseEvents: 0
-    handleLevelLoaded: 0
-    handleTriggerEnter2D: 0
-    handleTriggerExit2D: 0
-    handleTriggerStay2D: 0
-    handleCollisionEnter2D: 0
-    handleCollisionExit2D: 0
-    handleCollisionStay2D: 0
-    handleTriggerEnter: 0
-    handleTriggerExit: 0
-    handleTriggerStay: 0
-    handleCollisionEnter: 0
-    handleCollisionExit: 0
-    handleCollisionStay: 0
-    handleParticleCollision: 0
-    handleControllerColliderHit: 0
-    handleJointBreak: 0
-    handleJointBreak2D: 0
-    handleOnGUI: 0
-    handleFixedUpdate: 0
-    handleLateUpdate: 0
-    handleApplicationEvents: 0
-    handleUiEvents: 0
-    handleLegacyNetworking: 0
-    handleAnimatorMove: 0
-    handleAnimatorIK: 0
-  fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
---- !u!114 &1925450017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5070574645754524253}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsm:
-    dataVersion: 2
-    usedInTemplate: {fileID: 0}
-    name: Movements and To Inside Ship
-    startState: outShip
-    states:
-    - name: outShip
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 64
-        y: 112
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: inSHIP
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: inShip
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Trigger2dEvent
-        - HutongGames.PlayMaker.Actions.CallMethod
-        - HutongGames.PlayMaker.ActionsInternal.Header
-        - HutongGames.PlayMaker.ActionsInternal.Header
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.EnableFSM
-        customNames:
-        - in Trigger2D Event
-        - 
-        - Movement Speed
-        - When outShip Actions
-        - 
-        - Deactivate ColorChangerUI
-        - Disable ColorChanger
-        actionEnabled: 01010001010001
-        actionIsOpen: 01010101000000
-        actionStartIndex: 00000000050000000b0000000d0000000f0000001400000019000000
-        actionHashCodes: 49491604ca51e900da209704da209704b2cf1000b2cf100087aa9700
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 1937999134790266785}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Player
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: SwitchToSpeed2
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: '[LB] ColorChanger On/Off'
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: Player_Movements
-          value: {fileID: 9005474658407881513}
-        fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - inSHIP
-        - inSHIP
-        - Double-click to edit comment.
-        byteData: 010000000100010000000000000000010001
-        arrayParamSizes: 00000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 140000000700000012000000170000001300000018000000120000000c000000270000000100000001000000030000000000000003000000000000001400000011000000110000000100000001000000140000001100000011000000010000000100000014000000120000001100000011000000
-        paramName:
-        - gameObject
-        - trigger
-        - collideTag
-        - sendEvent
-        - storeCollider
-        - behaviour
-        - methodName
-        - parameters
-        - storeResult
-        - everyFrame
-        - manualUI
-        - comment
-        - colorId
-        - comment
-        - colorId
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - fsmName
-        - enable
-        - resetOnExit
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000000000000000000004000000050000000100000006000000020000000a0000000100000000000000010000000e0000000f000000020000000200000003000000100000001100000003000000020000000400000005000000
-        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000000000000000000000100000001000000000000000400000000000000040000000000000000000000000000000100000001000000000000000000000000000000010000000100000000000000000000000000000000000000
-    - name: inShip
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 288
-        y: 112
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: notinSHIP
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: outShip
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Trigger2dEvent
-        - HutongGames.PlayMaker.ActionsInternal.Header
-        - HutongGames.PlayMaker.Actions.CallMethod
-        - HutongGames.PlayMaker.ActionsInternal.Header
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.EnableFSM
-        customNames:
-        - 'out Trigger2D Event '
-        - Movement Speed
-        - 
-        - When inShip Actions
-        - Activate The Shooter
-        - Deactivate ColorChangerUI
-        - Deactivate test
-        - Enable ColorChanger
-        actionEnabled: 0101010101010001
-        actionIsOpen: 0101010000000100
-        actionStartIndex: 0000000005000000070000000d0000000f00000014000000190000001e000000
-        actionHashCodes: 49491604da209704ca51e900da209704b2cf1000b2cf1000b2cf100087aa9700
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 1937999134790266785}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Player
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: SwitchToSpeed1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: '[LB] ColorChanger On/Off'
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: Player_Movements
-          value: {fileID: 9005474658407881513}
-        fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - notinSHIP
-        - Double-click to edit comment.
-        - Double-click to edit comment.
-        byteData: 0200000000000000010000000000000100010001
-        arrayParamSizes: 00000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1400000007000000120000001700000013000000030000000000000018000000120000000c000000270000000100000001000000030000000000000014000000110000001100000001000000010000001400000011000000110000000100000001000000140000001100000011000000010000000100000014000000120000001100000011000000
-        paramName:
-        - gameObject
-        - trigger
-        - collideTag
-        - sendEvent
-        - storeCollider
-        - comment
-        - colorId
-        - behaviour
-        - methodName
-        - parameters
-        - storeResult
-        - everyFrame
-        - manualUI
-        - comment
-        - colorId
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        - gameObject
-        - fsmName
-        - enable
-        - resetOnExit
-        paramDataPos: 00000000000000000000000000000000000000000100000004000000000000000100000000000000000000000800000009000000020000000a0000000100000000000000010000000e0000000f0000000200000002000000030000001000000011000000030000000400000005000000120000001300000004000000020000000600000007000000
-        paramByteDataSize: 00000000040000000000000000000000000000000000000004000000000000000000000000000000000000000100000001000000000000000400000000000000000000000000000001000000010000000000000000000000000000000100000001000000000000000000000000000000010000000100000000000000000000000000000000000000
-    events:
-    - name: inSHIP
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: notinSHIP
-      isSystemEvent: 0
-      isGlobal: 0
-    globalTransitions: []
-    variables:
-      floatVariables:
-      - useVariable: 1
-        name: speedtestx
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      intVariables: []
-      boolVariables:
-      - useVariable: 1
-        name: 
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
-        name: 
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
-        name: 
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      stringVariables: []
-      vector2Variables:
-      - useVariable: 1
-        name: 
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {x: 0, y: 0}
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables: []
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-      arrayVariables: []
-      enumVariables: []
-      categories:
-      - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000
-    description: 
-    docUrl: 
-    showStateLabel: 0
-    maxLoopCount: 0
-    watermark: 
-    password: 
-    locked: 0
-    manualUpdate: 0
-    outVariableIndices: 
-    keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
-    ExposedEvents: []
-    OutputEvents: []
-    RestartOnEnable: 1
-    ResetVariablesOnEnable: 0
-    EnableDebugFlow: 0
-    EnableBreakpoints: 1
-    editorFlags: 225
-    activeStateName: 
-    mouseEvents: 0
-    handleLevelLoaded: 0
-    handleTriggerEnter2D: 0
-    handleTriggerExit2D: 0
-    handleTriggerStay2D: 0
-    handleCollisionEnter2D: 0
-    handleCollisionExit2D: 0
-    handleCollisionStay2D: 0
-    handleTriggerEnter: 0
-    handleTriggerExit: 0
-    handleTriggerStay: 0
-    handleCollisionEnter: 0
-    handleCollisionExit: 0
-    handleCollisionStay: 0
-    handleParticleCollision: 0
-    handleControllerColliderHit: 0
-    handleJointBreak: 0
-    handleJointBreak2D: 0
-    handleOnGUI: 0
-    handleFixedUpdate: 0
-    handleLateUpdate: 0
-    handleApplicationEvents: 0
-    handleUiEvents: 0
-    handleLegacyNetworking: 0
-    handleAnimatorMove: 0
-    handleAnimatorIK: 0
-  fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  m_Actions: {fileID: -944628639613478452, guid: 0fca43ab3cdced24d86dea89af2b9228, type: 3}
+  m_NotificationBehavior: 1
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fbc22107-723a-4e09-af4d-f56e74337a6d
+    m_ActionName: Player/[L-Joy] Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 470d232b-35d9-43d5-ba06-3eaadc01758d
+    m_ActionName: Player/[L-JoyPress][/XInputControllerWindows/leftStickPress]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9031724b-135b-46ba-9826-ae46aa3f70cb
+    m_ActionName: Player/[R-Joy] Look[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2422450f-fecc-4701-aabd-c7b2f24986cb
+    m_ActionName: Player/[RJoyPress][/XInputControllerWindows/rightStickPress]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9012e352-3378-4381-bf56-e7d934a54c7d
+    m_ActionName: Player/[X][/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed73a9fe-ac64-407b-912c-270f0d296885
+    m_ActionName: Player/[A][/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d489f309-2e55-4598-9299-b4c16c354615
+    m_ActionName: Player/[B][/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e6c9b7c1-d026-4b9c-ab23-cb3d7dbf927c
+    m_ActionName: Player/[Y][/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd968b01-a2e2-4ad0-bfe8-1decc40374e1
+    m_ActionName: Player/[LB] ColourSelect[/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bbc88d68-6b08-4c26-ae0c-ba36c29f55a3
+    m_ActionName: Player/[RB] Absorb[/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 124615d0-fd5d-476d-9b07-5a4c2abc1685
+    m_ActionName: Player/[LT][/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2558eefa-244c-454d-911b-f67a169d38a6
+    m_ActionName: Player/[RT] Shoot[/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e995b6f8-ca13-438b-b434-0fba2efd9239
+    m_ActionName: Player/[Select] Map[/XInputControllerWindows/select]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a7147c73-e1a6-4ecc-a367-35f4c764467a
+    m_ActionName: Player/[Start] Pause[/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 571d4482-e64c-4013-9543-9386261f8cfb
+    m_ActionName: Title Screen/[L-Joy] Menu Nav[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 45f68da0-77d8-4363-a736-fa8985f35862
+    m_ActionName: Title Screen/[L-JoyPress][/XInputControllerWindows/leftStickPress]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 506a52b5-3fcb-423c-8035-d8f17d1b0fa3
+    m_ActionName: Title Screen/[R-Joy][/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4b52a1db-eaf4-422b-854c-57346b00fd1a
+    m_ActionName: Title Screen/[RJoyPress][/XInputControllerWindows/rightStickPress]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4763295e-5eb9-4dca-a04a-6c26e6c0a928
+    m_ActionName: Title Screen/[X][/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 084b343d-4bef-4562-972c-6726963a6d12
+    m_ActionName: Title Screen/[A] Accept[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: befd6da8-ae82-4d65-ad3a-618d94f921d0
+    m_ActionName: Title Screen/[B] Back[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef948ee3-c416-4613-afe6-68c46a4b5c10
+    m_ActionName: Title Screen/[Y][/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e07f0b22-f2a2-48cf-b631-fa24ff5f5c8b
+    m_ActionName: Title Screen/[LB] Left Tab[/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 468cf3fe-8492-4638-8d78-ce13451e3a11
+    m_ActionName: Title Screen/[RB] Right Tab[/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 884eff75-246c-4ecf-adbd-a20a6cd723a3
+    m_ActionName: Title Screen/[LT][/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6af75a79-0b11-4e9f-bfbe-99bc6c5f341f
+    m_ActionName: Title Screen/[RT][/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bee279f6-d14d-4a93-ac4a-606cb7f1d489
+    m_ActionName: Title Screen/[Select][/XInputControllerWindows/select]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d372b36e-3a3d-4802-a42f-711acd0a0959
+    m_ActionName: Title Screen/[Start][/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 68dcc5de-5089-4f17-8b44-0ba777bc84ef
+    m_ActionName: Pause Menu/[L-Joy] Menu Nav[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 219f9239-d6d3-4bc9-86d6-0718adb62af7
+    m_ActionName: Pause Menu/[L-JoyPress][/XInputControllerWindows/leftStickPress]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 31f5e4fb-57f2-4d23-b036-a446b7cda234
+    m_ActionName: Pause Menu/[R-Joy][/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f36cf0c6-dba5-4617-8d67-6f39e46b7a22
+    m_ActionName: Pause Menu/[RJoyPress][/XInputControllerWindows/rightStickPress]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee5b18ac-c599-44d5-96a5-8699c43bc86d
+    m_ActionName: Pause Menu/[X][/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c95a312f-f42d-4f8b-8e0e-fe92b78b2783
+    m_ActionName: Pause Menu/[A] Accept[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14abf23f-dd4e-4db5-a07b-2d77e988b90b
+    m_ActionName: Pause Menu/[B] Back[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89698848-98cf-4d43-939e-25549ae0fe8a
+    m_ActionName: Pause Menu/[Y][/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 631c4acd-cee1-4050-9fbb-28d22a9726fc
+    m_ActionName: Pause Menu/[LB] Left Tab[/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dabd8c9c-8c27-4b4e-89f2-57969e41be18
+    m_ActionName: Pause Menu/[RB] Right Tab[/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b91d11b5-af80-45ea-9424-ed58f4fb8ec2
+    m_ActionName: Pause Menu/[LT][/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c9f836c-97fc-46b9-ba21-43828e7d9c1d
+    m_ActionName: Pause Menu/[RT][/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1551bd0-4163-4675-bd27-799f7841f071
+    m_ActionName: Pause Menu/[Select][/XInputControllerWindows/select]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b608b52-fcb0-4af4-8687-4e86be52989f
+    m_ActionName: Pause Menu/[Start] Unpause[/XInputControllerWindows/start]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &1925450018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4450,15 +3394,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 10
-  backwardSpeed: 3
+  backwardSpeed: 7
   sidewaysSpeed: 7
+  dodgeForce: 1500
+  dodgeDuration: 0.5
+  dodgeCooldown: 3
   playerInput: {fileID: 4158555829924889031}
   movementAction: {fileID: 3673255440832884089, guid: 0fca43ab3cdced24d86dea89af2b9228, type: 3}
   rightStickAction: {fileID: -2419919374168302799, guid: 0fca43ab3cdced24d86dea89af2b9228, type: 3}
+  dodgeAction: {fileID: 7006329670772950868, guid: 0fca43ab3cdced24d86dea89af2b9228, type: 3}
   mainCameraTransform: {fileID: 0}
   animator: {fileID: 844773662}
   yAnimParam: L-Joy-Y_anim
   xAnimParam: L-Joy-X_anim
+  isDodgeAnimParam: IsDodge
 --- !u!114 &1908668587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4579,6 +3528,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287856310}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 06a28efc47910ae4597364b8300878b7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1309610066}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 06a28efc47910ae4597364b8300878b7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onCyanAction:
     m_PersistentCalls:
       m_Calls:
@@ -4632,7 +3605,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4665,6 +3638,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287856310}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 875a388d0e875b247a1e27759890f031, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1309610066}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 875a388d0e875b247a1e27759890f031, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   onMagentaAction:
     m_PersistentCalls:
@@ -4748,6 +3745,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287856310}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 68e790ea99414c442a5a421e969a17c4, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4840,6 +3849,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 287856310}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 2f1e7f2d016abc84fb9c5c4412221cd4, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   whiteUnlocker: {fileID: 0}
   cyanUnlocker: {fileID: 0}
   magentaUnlocker: {fileID: 0}
@@ -4856,14 +3877,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b685569c5489e42b74f62df40e02b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  health3Image: {fileID: 0}
-  health2Image: {fileID: 0}
-  health1Image: {fileID: 0}
-  waitTime: 0.5
-  hurtSound: {fileID: 8300000, guid: 1f343d8e1e030ac438dd272b75500e47, type: 3}
-  lifeSound: {fileID: 8300000, guid: 552e61960103eda47beed27970fd9e22, type: 3}
+  baseMaxHealth: 10
+  cappedMaxHealth: 10
+  currentHealth: 3
+  healthImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  getHurtCooldown: 1
+  getHealCooldown: 1
+  audioSource: {fileID: 0}
+  getHurtSound: {fileID: 0}
+  healingSound: {fileID: 0}
   noLifeSound: {fileID: 8300000, guid: 41f3d1cc720ead14692626569b5954e3, type: 3}
+  hazardTag: hazard
+  healOneTag: heal/one
+  healDoubleTag: heal/double
+  healFullTag: heal/full
+  increaseMaxHealthTag: increase/maxhealth
+  hurtOneTag: hurt/one
+  hurtDoubleTag: hurt/double
+  hurtTripleTag: hurt/triple
+  hurtFullTag: hurt/full
+  onPlayerDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1925852637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4876,17 +3921,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a34663ca705a54eac3205e225a6d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightType: 0
+  lightType: 1
   lightPresetId: 0
   eventPresetId: 1
   lightLayer: 0
   occlusionLayer: 0
   translucentLayer: 0
   translucentPresetId: 0
-  color: {r: 31.061882, g: 28.409395, b: 21.83123, a: 0.027}
-  size: 25.8
-  spotAngleInner: 0
-  spotAngleOuter: 38.619133
+  color: {r: 9.965379, g: 9.965379, b: 9.965379, a: 0.052}
+  size: 18.6
+  spotAngleInner: 16.270134
+  spotAngleOuter: 70.04622
   coreSize: 0.5
   falloff: 0
   lightStrength: 0
@@ -4896,17 +3941,17 @@ MonoBehaviour:
   shadowDistanceFar: 0
   maskTranslucencyQuality: 1
   maskTranslucencyStrength: 0.42
-  applyRotation: 2
+  applyRotation: 1
   textureSize: 1
   meshMode:
-    enable: 1
-    alpha: 0.009
-    shader: 1
+    enable: 0
+    alpha: 0
+    shader: 0
     materials:
     - {fileID: 0}
     sortingLayer:
       name: Default
-      Order: 1
+      Order: 0
   bumpMap:
     intensity: 1
     depth: 5
@@ -4950,7 +3995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7579541712586119423}
   m_LocalRotation: {x: 0, y: 0, z: 0.07845904, w: -0.99691737}
-  m_LocalPosition: {x: 0, y: 1.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4964,46 +4009,46 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7579541712586119423}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a34663ca705a54eac3205e225a6d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightType: 0
+  lightType: 1
   lightPresetId: 0
   eventPresetId: 0
-  lightLayer: -1
+  lightLayer: 0
   occlusionLayer: 1
-  translucentLayer: 2
+  translucentLayer: 0
   translucentPresetId: 0
-  color: {r: 0.4339623, g: 0.39281774, b: 0.29681382, a: 1}
-  size: 4.7
+  color: {r: 0, g: 0, b: 0, a: 0}
+  size: 0.1
   spotAngleInner: 360
   spotAngleOuter: 360
   coreSize: 0.5
   falloff: 0
-  lightStrength: 1
+  lightStrength: 0
   outerAngle: 0
   lightRadius: 1
   shadowDistanceClose: 0
-  shadowDistanceFar: 5
+  shadowDistanceFar: 0
   maskTranslucencyQuality: 1
-  maskTranslucencyStrength: 0.5
+  maskTranslucencyStrength: 0
   applyRotation: 1
   textureSize: 1
   meshMode:
     enable: 1
-    alpha: 0
-    shader: 0
+    alpha: 1
+    shader: 1
     materials:
     - {fileID: 0}
     sortingLayer:
       name: Default
-      Order: 0
+      Order: 4
   bumpMap:
-    intensity: 1
+    intensity: 1.03
     depth: 1
-  whenInsideCollider: 0
+  whenInsideCollider: 2
   lightSprite: 0
   sprite: {fileID: 21300000, guid: 6592d6be03fd808449716a11558d506f, type: 3}
   spriteFlipX: 0

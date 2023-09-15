@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MagentaSelect_0
+      name: MagentaSelect_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
+        width: 30
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9ea1e3b20e2e7145925b2a6e5a1b97a
-      internalID: 1742893299
+      spriteID: 376941cdeb0eb324f8c1901625f04d1e
+      internalID: -1018864576
       vertices: []
       indices: 
       edges: []
@@ -161,6 +161,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       MagentaSelect_0: 1742893299
+      MagentaSelect_1: -1018864576
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

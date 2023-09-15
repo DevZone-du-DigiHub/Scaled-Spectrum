@@ -134,7 +134,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
+        width: 30
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -161,6 +161,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       YellowSelect_0: 1460532421
+      YellowSelect_1: 1080598254
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
